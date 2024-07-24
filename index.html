@@ -5,16 +5,16 @@
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<link rel="stylesheet" href="./styles.css"></link>
-			<title>Theo Nguyen's porfolio</title>
+			<title>Theo Nguyen's Porfolio</title>
 		</head>
 	<body>
 		<header class="navbar-container-fixed">
-			<div class="navbar">
+			<nav class="navbar">
 				<a href="#welcome"><div class="navbar-tile">Welcome</div></a>
 				<a href="#about-me"><div class="navbar-tile">About Me</div></a>
+				<a href="#career"><div class="navbar-tile">My Career</div></a>
 				<a href="#projects"><div class="navbar-tile">My Projects</div></a>
-				<a href="#contacts"><div class="navbar-tile">Contacts</div></a>
-			</div>
+			</nav>
 		</header>
 
 		<section class="page-single" id="welcome">
@@ -70,6 +70,9 @@
 
 			</div>
 		</section>
+		<section class="page-single" id="career">
+			<div class="headline">My Career</div>
+		</section> 
 		<section class="page-double" id="projects">
 			<div class="headline">My Projects</div>
 			<div class="project-container">
@@ -104,10 +107,26 @@
 				</div>
 			</div>
 		</section>
-		<section class="page-single" id="contacts">
-			<div class="headline">Contacts</div>
-		</section> 
 	</body>
 	<footer>
+		<div class="end-of-page-container">
+			<nav class="navbar">
+				<a href="#welcome"><div class="navbar-tile-footer">Welcome</div></a>
+				<a href="#about-me"><div class="navbar-tile-footer">About Me</div></a>
+				<a href="#career"><div class="navbar-tile-footer">My Career</div></a>
+				<a href="#projects"><div class="navbar-tile-footer">My Projects</div></a>
+			</nav>
+			<div class="logo-container">
+				<a href="https://www.linkedin.com/in/theo-nguyen-303641228/" target="_blank">
+					<img class="hoverable-scale" height="60" src="./Photos/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn Logo to LinkedIn Profile"/>
+				</a>
+				<a href="mailto:ngthng@student.ubc.ca" target="_blank">
+					<img class="hoverable-scale" height="60" src="./Photos/Microsoft_Outlook-Logo.wine.png" alt="Outlook Logo to Email Theo Nguyen"/>
+				</a>
+			</div>
+		</div>
+		<div class="credits-container">
+			2024 | Theo Nguyen's Portfolio 
+		</div>
 	</footer>
 </html>
