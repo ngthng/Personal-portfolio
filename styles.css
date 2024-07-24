@@ -12,9 +12,9 @@
     --page-height: 1000px;
     --page-width: 100%;
 
+    --nav-bar-width: 540px;
     --nav-bar-tile-width: calc(var(--nav-bar-width)/4);
     --nav-bar-tile-height: 45px;
-    --nav-bar-width: 540px;
     --nav-bar-height: var(--nav-bar-tile-height);
     --nav-bar-font-size: 19px;
 
@@ -27,6 +27,9 @@
     --description-font-size: 20px;
 }
 
+a {
+    color: black;
+}
 
 * {
     box-sizing: content-box;
@@ -40,6 +43,7 @@ body {
     flex-flow: wrap;
     margin: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /* START Customizing the navbar*/
@@ -54,7 +58,7 @@ body {
     box-shadow: var(--shadow);
     display: flex;
     justify-content: center;
-
+    
     z-index: 5;
 }
 
@@ -119,8 +123,8 @@ body {
 
 .page-double {
     border: 1px solid transparent;
-    width: 100%;
-    height: 200%;
+    width: var(--page-width);
+    height: calc(var(--page-height) * 1.5);
     margin: 0;
 }
 
