@@ -405,7 +405,6 @@ body {
 }
 
 
-
 .hoverable-scale {
     transition: transform 0.25s ease-in-out 0ms;
 }
@@ -471,6 +470,15 @@ footer {
 
     .flexbox-media-text > .filler-vertical {
         height: 200px;
+    }
+
+    #projects {
+        height: calc(var(--page-height) * 2.3);
+    }
+
+    .project-container {
+        grid-template-rows: repeat(5, 5fr);
+        grid-template-columns: 1fr;
     }
 }
 
