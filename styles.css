@@ -472,6 +472,15 @@ footer {
         height: 200px;
     }
 
+    .flexbox-media-text > .video-mask {
+        width: 450px;
+      
+    }
+
+    .flexbox-media-text > .video-mask > video {
+        object-fit: cover;
+        object-position: 20% 20%;
+    }
     #projects {
         height: calc(var(--page-height) * 2.3);
     }
