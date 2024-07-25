@@ -389,8 +389,9 @@ body {
 }
 
 .job-experience-date {
-    font-family: "Exo 2", monospace;
-    margin: 12px 0;
+    font-family: "PlaywriteCU", monospace;
+    margin: 9px 0;
+    font-size: 14px;
 }
 
 #yachie-logo {
@@ -403,6 +404,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: 50% 30%;
+    
 }
 
 #bertram-logo {
