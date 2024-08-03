@@ -1,13 +1,3 @@
-@font-face {
-    font-family: PlaywriteCU;
-    src: url(./Fonts/Playwrite_CU/PlaywriteCU-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: Exo2;
-    src: url(./Fonts/Exo_2/Exo2-VariableFont_wght.ttf);
-}
-
 :root{
     --page-height: 1000px;
     --page-width: 100%;
@@ -151,7 +141,7 @@ body {
 
 .welcome-title {
     
-    font-family: PlaywriteCU, monospace;
+    font-family: "Playwrite CU", monospace;
     line-height: 120%;
     font-size: var(--welcome-title-font-size);
 }
@@ -159,7 +149,7 @@ body {
 
 .welcome-subtitle{
     
-    font-family: Exo2, monospace;
+    font-family: "Exo 2", monospace;
     font-size: --weocome-subtitle-font-size;
     text-align: right;
     padding-top: 7px;
@@ -178,7 +168,7 @@ body {
 
 .profile-text {
     padding: 13px 25px;
-    font-family: Exo2, monospace;
+    font-family: "Exo 2", monospace;
     font-size: var(--profile-description-font-size);
     
 }
@@ -211,7 +201,7 @@ body {
 .headline {
 
     position: relative;
-    font-family: Exo2, monospace;
+    font-family: "Exo 2", monospace;
     font-weight: 800;
     font-size: 90px;
     text-transform: uppercase;
@@ -268,7 +258,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: Exo2, monospace;
+    font-family: "Exo 2", monospace;
     font-size: var(--profile-description-font-size) ;
     
     width: 400px;
@@ -389,7 +379,7 @@ body {
 }
 
 .job-experience-date {
-    font-family: "PlaywriteCU", monospace;
+    font-family: "Playwrite CU", monospace;
     margin: 9px 0;
     font-size: 14px;
 }
@@ -484,20 +474,20 @@ body {
 
 .project-description-title {
     margin: 0;
-    font-family: PlayWriteCU, monospace;
+    font-family: "Playwrite CU", monospace;
     
 }
 
 .project-description-body {
     margin: 0;
     padding-top: 5px;
-    font-family: Exo2, monospace;
+    font-family: "Exo 2", monospace;
     font-size: var(--body-descrption-font-size);
 }
 
 .coming-soon {
     content: "Coming Soon";
-    font-family: PlayWriteCU, monospace;
+    font-family: "Playwrite CU", monospace;
     align-items: center;
     justify-content: center;
     color: black;
