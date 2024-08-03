@@ -4,6 +4,12 @@
 
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+			<!--Importing fonts from Google Fonts-->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+			
 			<link rel="stylesheet" href="./styles/styles.css"></link>
 			<title>Theo Nguyen's Porfolio</title>
 		</head>
@@ -72,49 +78,9 @@
 		</section>
 		<section class="page-single" id="career">
 			<div class="headline">My Career</div>
-			<div class="career-container">
-				<div class="job-experience-container">
-					<div class="job-experience-img-wrapper">
-						<img id="yachie-group-photo" src="./Photos/yachie-lab.JPG" height="250" alt="Group photo of the Yachie lab">
-					</div>
-					<div class="job-experience-description-wrapper">
-						<a href="https://yachie-lab.org/" target="_blank">
-							<img id="yachie-logo" src="./Photos/teal_yachielablogo.svg" height="40px"/>
-						</a>
-						<h3 class="job-experience-date">May 2024 - Current</h3>
-						<div class="job-experience-description-body-wrapper">
-							<p class="job-experience-description-body">
-								As the Research Assistant for the Gene Regulatory Network project, 
-								I implement machine learning to process and intepret RNA and transcriptomic data. 
-							</p>
-							<p class="job-experience-description-body">
-								Channelling my passion for programming, mathematics, and biology, I find myself enjoying solving challenges every day.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="job-experience-container">
-					<div class="job-experience-img-wrapper">
-						<img id="bertram-group-photo" src="./Photos/bertram-group.jfif" alt="Group photo of the Yachie lab">
-					</div>
-					<div class="job-experience-description-wrapper">
-						<a id="bertram-logo" href="https://bertram.chem.ubc.ca/" target="_blank">
-							<img src="./Photos/ubc-logo.png" height="40"/><span>Department of Chemistry<br>Bertram Group</span>
-						</a>
-						<h3 class="job-experience-date">September 2023 - May 2024</h3>
-						<div class="job-experience-description-body-wrapper">
-							<p class="job-experience-description-body">
-								Working with Julia Zaks, I investigated how radical chemistry can be leveraged to decontaminate
-								the ion optics of mass spectrometers.
-							</p>
-							<p class="job-experience-description-body">
-								With experience in data processing, I applied my knowledge to the field in which I was not entirely
-								an expert yet. 
-							</p>
-						</div>
-					</div>
-				</div>
+			<div class="career-menu js-career-menu">
 			</div>
+			<div class="career-container js-career-container"></div>
 		</section> 
 		<section class="page-double" id="projects">
 			<div class="headline">My Projects</div>
@@ -150,29 +116,31 @@
 				</div>
 			</div>
 		</section>
-	</body>
-	<footer>
-		<div class="end-of-page-container">
-			<nav class="navbar">
-				<a href="#welcome"><div class="navbar-tile-footer">Welcome</div></a>
-				<a href="#about-me"><div class="navbar-tile-footer">About Me</div></a>
-				<a href="#career"><div class="navbar-tile-footer">My Career</div></a>
-				<a href="#projects"><div class="navbar-tile-footer">My Projects</div></a>
-			</nav>
-			<div class="logo-container">
-				<a href="https://www.linkedin.com/in/theo-nguyen-303641228/" target="_blank">
-					<img class="hoverable-scale logo-link" height="60" src="./Photos/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn Logo to LinkedIn Profile"/>
-				</a>
-				<a href="mailto:ngthng@student.ubc.ca" target="_blank">
-					<img class="hoverable-scale logo-link" height="60" src="./Photos/Microsoft_Outlook-Logo.wine.png" alt="Outlook Logo to Email Theo Nguyen"/>
-				</a>
-				<a href="https://github.com/ngthng" target="_blank">
-					<img id="logo-github" class="hoverable-scale logo-link" height="15" width="15" src="/Photos/github-logo.webp" alt="Github logo"/>
-				</a>
+		<footer>
+			<div class="end-of-page-container">
+				<nav class="navbar">
+					<a href="#welcome"><div class="navbar-tile-footer">Welcome</div></a>
+					<a href="#about-me"><div class="navbar-tile-footer">About Me</div></a>
+					<a href="#career"><div class="navbar-tile-footer">My Career</div></a>
+					<a href="#projects"><div class="navbar-tile-footer">My Projects</div></a>
+				</nav>
+				<div class="logo-container">
+					<a href="https://www.linkedin.com/in/theo-nguyen-303641228/" target="_blank">
+						<img class="hoverable-scale logo-link" height="60" src="./Photos/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn Logo to LinkedIn Profile"/>
+					</a>
+					<a href="mailto:ngthng@student.ubc.ca" target="_blank">
+						<img class="hoverable-scale logo-link" height="60" src="./Photos/Microsoft_Outlook-Logo.wine.png" alt="Outlook Logo to Email Theo Nguyen"/>
+					</a>
+					<a href="https://github.com/ngthng" target="_blank">
+						<img id="logo-github" class="hoverable-scale logo-link" height="15" width="15" src="/Photos/github-logo.webp" alt="Github logo"/>
+					</a>
+				</div>
 			</div>
-		</div>
-		<div class="credits-container">
-			2024 | Theo Nguyen's Portfolio 
-		</div>
-	</footer>
+			<div class="credits-container">
+				2024 | Theo Nguyen's Portfolio 
+			</div>
+		</footer>
+		<script src="./scripts/index.js" type="module"></script>
+	</body>
+	
 </html>
