@@ -1,3 +1,4 @@
+
 :root{
     --page-height: 1000px;
     --page-width: 100%;
@@ -18,7 +19,7 @@
     --default-border-rad: 20px;
 
     --profile-description-font-size: 20px;
-    --body-descrption-font-size: 16px;
+    --body-description-font-size: 16px;
 }
 
 a {
@@ -89,7 +90,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: var(--nav-bar-font-size);
-    
+    border: 3px solid transparent;
     transition: background-color 0.35s ease-in-out 0ms,
                 color 0.35s ease-in-out 0ms,
                 border-top 0.15s ease-in-out 0ms;
@@ -141,7 +142,7 @@ body {
 
 .welcome-title {
     
-    font-family: "Playwrite CU", monospace;
+    font-family: "PlayWrite CU", monospace;
     line-height: 120%;
     font-size: var(--welcome-title-font-size);
 }
@@ -318,46 +319,83 @@ body {
     top: calc(var(--nav-bar-height) + 10px) ;
 }
 
-.career-container {
+.career-page-body-container {
+    margin-top: calc(var(--nav-bar-height) - 20px);
     width: 100%;
-    height: calc(100% - calc(var(--nav-bar-height) + 10px));
-    margin: auto;
-    margin-top: calc(var(--nav-bar-height) );
-    
+    height: calc(100% - var(--nav-bar-height) * 3 - 10px);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    gap: 5px ;
+}
+
+.career-button-container {
+   height: 10%;
+   width: 100%;
+   padding: 2px;
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+  
+}
+
+.career-button {
+    width: 250px;
+    height: 25px;
+    font-family: "OCR A Std", monospace;
+    font-size: 20px;
+    background-color: white;
+    border: 1.5px solid transparent;
+    transition: background-color 0.25s ease-in-out 0ms,
+                color 0.25s ease-in-out 0ms,
+                border-left 0.25s ease-in-out 0ms,
+                border-right 0.25s ease-in-out 0ms;
+}
+
+.career-button:hover {
+    color: white;
+    background-color: lightpink;
+    border-left: 1.5px solid lightseagreen;
+    border-right: 1.5px solid lightseagreen;
+}
+
+.career-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    
 }
 
 .job-experience-container {
-    width: 70%;
-    height: 25%;
-    border-radius: var(--default-border-rad);
-    box-shadow: var(--shadow);
+    width: 100%;
+    height: 100%;
+    
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .job-experience-img-wrapper {
     
     height: 100%;
-    width: 60%;
+    width: 45%;
     border-radius: var(--default-border-rad);
     overflow: hidden;
 }
 
-#yachie-group-photo {
+#yachieLab-photo {
     height: 100%;
     width: 115%;
     object-fit: cover;
-    object-position: 60% 50%;
+    object-position: 20% 0%;
 }
 
 .job-experience-description-wrapper {
     height: 100%;
-    width: 100%;
+    width: 27%;
     margin-left: 15px;
     margin-right: 15px;
     display: flex;
@@ -367,37 +405,36 @@ body {
 
 .job-experience-description-body {
     font-family: "Exo 2", monospace;
-    font-size: var(--body-descrption-font-size);
+    font-size: var(--profile-description-font-size);
     margin: 0;
 }
 
 .job-experience-description-body-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 6px;
 }
 
 .job-experience-date {
-    font-family: "Playwrite CU", monospace;
-    margin: 9px 0;
-    font-size: 14px;
+    font-family: "PlayWrite CU", monospace;
+    margin: 30px 0;
+    font-size: 20px;
 }
 
-#yachie-logo {
+#yachieLab-logo {
     margin-top: 10px;
-    transform: scale(1.03);
+    padding-left: 20px;
+    transform: scale(1.5);
 }
 
-#bertram-group-photo {
+#bertramGroup-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 30%;
-    
 }
 
-#bertram-logo {
+#bertramGroup-logo {
     margin-top: 12px;
     font-family: sans-serif;
     font-weight: 550;
@@ -474,7 +511,7 @@ body {
 
 .project-description-title {
     margin: 0;
-    font-family: "Playwrite CU", monospace;
+    font-family: "PlayWrite CU", monospace;
     
 }
 
@@ -482,12 +519,12 @@ body {
     margin: 0;
     padding-top: 5px;
     font-family: "Exo 2", monospace;
-    font-size: var(--body-descrption-font-size);
+    font-size: var(--body-description-font-size);
 }
 
 .coming-soon {
     content: "Coming Soon";
-    font-family: "Playwrite CU", monospace;
+    font-family: "PlayWrite CU", monospace;
     align-items: center;
     justify-content: center;
     color: black;
@@ -550,6 +587,7 @@ footer {
     width: 100px;
     height: fit-content;
     color: white;
+    border: 2px solid transparent;
     transition: background-color 0.35s ease-in-out 0ms,
                 color 0.35s ease-in-out 0ms,
                 border-top 0.35s ease-in-out 0ms;
@@ -599,15 +637,16 @@ footer {
         transform: translateY(-3px);
     }
 
+
     .job-experience-container {
-        width: 80%;
-        height: 40%;
-        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
     }
 
     .job-experience-img-wrapper {
-        width: 100%;
-        height: 30%;
+        width: 60%;
+        height: 100%;
     }
 
     .job-experience-description-body-wrapper {
@@ -636,35 +675,12 @@ footer {
         transform: translateY(-3px);
     }
 
-    .job-experience-container {
-        width: 80%;
-        height: 40%;
-        flex-direction: column;
-    }
-
-    .job-experience-img-wrapper {
-        width: 100%;
-        height: 30%;
-    }
-
-    .job-experience-description-body-wrapper {
-        
-        grid-template-columns: 95%;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 20%;
-        overflow: visible;
-        
-    }
-
-    #bertram-group-photo {
-        object-position: 50% 50%;
-    }
 }
 
 @media only screen and (max-width: 600px) {
     :root {
         --nav-bar-font-size: 15px;
-        --body-descrption-font-size: 15px;
+        --body-description-font-size: 15px;
     }
     html {
         width: 500px;
@@ -704,31 +720,6 @@ footer {
     .project-tile:hover {
         height: 515px;
         transform: translateY(-3px);
-    }
-
-    .job-experience-container {
-        width: 80%;
-        height: 40%;
-        flex-direction: column;
-    }
-    
-    
-
-    .job-experience-img-wrapper {
-        width: 100%;
-        height: 30%;
-    }
-
-    .job-experience-description-body-wrapper {
-        
-        grid-template-columns: 95%;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 20%;
-        overflow: visible; 
-    }
-
-    #bertram-group-photo {
-        object-position: 50% 50%;
     }
 }
 
