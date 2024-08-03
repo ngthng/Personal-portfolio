@@ -319,11 +319,15 @@ body {
     top: calc(var(--nav-bar-height) + 10px) ;
 }
 
+.career-button-container {
+    margin-top: calc(calc(var(--nav-bar-height) + 10px));
+}
+
 .career-container {
     width: 100%;
     height: calc(100% - calc(var(--nav-bar-height) + 10px));
     margin: auto;
-    margin-top: calc(var(--nav-bar-height) );
+    margin-top: 10px;
     
     display: flex;
     flex-direction: column;

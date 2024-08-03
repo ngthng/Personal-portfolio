@@ -1,6 +1,7 @@
 export const jobList = [
   {
     name: 'yachieLab',
+    nameDisplay: 'Yachie Lab',
     groupPhoto: {
       path:'../Photos/yachie-lab.JPG',
       height: 250,
@@ -19,6 +20,7 @@ export const jobList = [
   },
   {
     name: 'bertramGroup',
+    nameDisplay: 'Bergram Research Group',
     groupPhoto: {
       path:'../Photos/bertram-group.jfif',
       height: 250,
