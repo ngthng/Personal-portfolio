@@ -36,7 +36,30 @@ export const jobList = [
       startingDate: 'September 2023',
       endingDate: 'May 2024'
     },
-    description: 'Working with Julia Zaks, I investigated how radical chemistry can be leveraged to decontaminate the ion optics of mass spectrometers. <br><br>With experience in data processing, I applied my knowledge to the field in which I was not entirely an expert yet.',
+    description: `Working with Julia Zaks, I investigated how radical chemistry can be leveraged to decontaminate the ion optics of mass spectrometers. 
+      <br><br>With experience in data processing, I applied my knowledge to the field in which I was not entirely an expert yet.`,
     
   },
+  {
+    name: 'fpel',
+    nameDisplay: 'FPEL',
+    groupPhoto: {
+      path:'../Photos/20230627_AnubhavSinghLab_006_P1555009-768x576.jpg',
+      height: 250,
+      alt: 'Group photo of the Food Process Engineering Lab'
+    },
+    logo: {
+      path: '../Photos/FPEL Logo.png',
+      height: "40",
+    },
+    webLink: 'https://fpel.landfood.ubc.ca/',
+    workingPeriod: {
+      startingDate: 'June 2023',
+      endingDate: 'August 2023'
+    },
+    description: `I started my research career with investigating berry pomace and how one could upcycle its byproducts. 
+      During the position, I designed the experimental setup, characterized the thin-film products, and assessed their applications.
+      <br><br>I also proposed my own project, investigating chitosan as an encapsulation nanoparticle.`,
+    
+  }
 ];

@@ -47,11 +47,15 @@ function careerMenuSelectorHTML() {
 
   document.querySelectorAll('.js-career-button').forEach((careerButton, index) => {
     careerButton.addEventListener('click', () => {
+
       renderJob(careerButton.dataset.jobName);
     });
   });
-    
+  
+  document.querySelectorAll('.js-career-button').forEach((careerButton, index) => {
+    careerButton.addEventListener('mouseover', () => {
+      renderJob(careerButton.dataset.jobName);
+      
+    });
+  });
 };
-
-
-

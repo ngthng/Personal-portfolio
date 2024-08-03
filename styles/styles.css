@@ -435,6 +435,8 @@ body {
 }
 
 #bertramGroup-logo {
+    padding-left: 45px;
+    transform: scale(1.4);
     margin-top: 12px;
     font-family: sans-serif;
     font-weight: 550;
@@ -443,6 +445,18 @@ body {
     text-decoration: none;
     display: inline-flex;
     color: #002145;
+}
+
+#fpel-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#fpel-logo {
+    padding-left: 45px;
+    transform: scale(1.4);
+    margin-top: 12px;
 }
 
 /* START My projects */
