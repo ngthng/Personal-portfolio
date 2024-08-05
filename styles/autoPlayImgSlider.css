@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  height: 400px;
+  width: 60%;
+  position: relative;
+}
+
+.slides {
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  padding: 0 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-controls{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#btn-prev, #btn-next {
+  font-size: 20px;
+}

@@ -1,5 +1,4 @@
 import { jobList } from "../data/myCareer.js";
-import { fadeIn, fadeOut, replaceFade} from "./utils/fades.js";
 
 careerMenuSelectorHTML();
 renderJob('yachieLab');
@@ -16,7 +15,7 @@ function renderJob(jobName) {
   const careerContainerElem = document.querySelector('.js-career-container');
   careerContainerElem
     .innerHTML = `
-      <div class="job-experience-container job-experience-container-${job.name} js-fade-in">
+      <div class="job-experience-container job-experience-container-${job.name}">
         <div class="job-experience-img-wrapper">
           <img id="${job.name}-photo" src="${job.groupPhoto.path}" height="${job.groupPhoto.height}" alt="${job.groupPhoto.alt}">
         </div>
@@ -48,21 +47,15 @@ function careerMenuSelectorHTML() {
 
   document.querySelectorAll('.js-career-button').forEach((careerButton, index) => {
     careerButton.addEventListener('click', () => {
-      const jobName = careerButton.dataset.jobName;
-      const fadeElement = document.querySelector('.js-career-container');
-    
-      replaceFade(fadeElement, () => {
-        renderJob(jobName);
-      }, 20, 50);
+
+      renderJob(careerButton.dataset.jobName);
     });
   });
   
-/*
   document.querySelectorAll('.js-career-button').forEach((careerButton, index) => {
     careerButton.addEventListener('mouseover', () => {
       renderJob(careerButton.dataset.jobName);
       
     });
   });
-*/
 };
