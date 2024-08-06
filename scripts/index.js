@@ -1,4 +1,5 @@
 import { jobList } from "../data/myCareer.js";
+import { replaceFade } from "./utils/fades.js";
 
 careerMenuSelectorHTML();
 renderJob('yachieLab');
@@ -48,14 +49,20 @@ function careerMenuSelectorHTML() {
   document.querySelectorAll('.js-career-button').forEach((careerButton, index) => {
     careerButton.addEventListener('click', () => {
 
-      renderJob(careerButton.dataset.jobName);
+      const elementFade = document.querySelector('.js-career-container')
+
+      replaceFade(elementFade, () => {
+        renderJob(careerButton.dataset.jobName)
+      }, 10, 30);
+      
     });
   });
-  
+  /*
   document.querySelectorAll('.js-career-button').forEach((careerButton, index) => {
     careerButton.addEventListener('mouseover', () => {
       renderJob(careerButton.dataset.jobName);
       
     });
   });
+  */
 };

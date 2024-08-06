@@ -24,7 +24,7 @@ export function fadeIn(element, milliseconds = 50, fun = () => {}) {
   }, milliseconds);
 };
 
-export function replaceFade(element, fun, fadeOutCycle=20, fadeInCycle=50) {
+export function replaceFade(element, fun = () => {}, fadeOutCycle=20, fadeInCycle=50) {
   new Promise((resolve) => {
     fadeOut(element, fadeOutCycle, () => {
       resolve();
