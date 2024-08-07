@@ -1,4 +1,5 @@
-import {Notes, Note} from '../scripts/noteContent.js'
+import {Notes, Note, InstagramNote} from '../scripts/noteContent.js'
+import {shuffle} from '../scripts/utils/shuffleArray.js';
 
 const welcomeNote = new Note(
   'welcome',
@@ -10,9 +11,39 @@ const welcomeNote = new Note(
       <li>Creating this webpage!</li>
       <li>Adding carousels from Instagram <a href="https://www.instagram.com/yootheocoooks/" target="_blank">@yootheocoooks</a></li>
       <li>Exploring baking with friends</li>
+      <li>In the process of moving house/job so I would have less time to play around :(</li>
     </ul>
   `,
   9,
+  3
+)
+
+const homePageInstructions = new Note(
+  'home-instructions',
+  `
+    <p>
+      This home page is where most of my cookings are. The squares you see are what I call "Notes". Click on the Notes to go to the post on my Instagram page!<br><br>
+      Future features: 
+    </p>
+    <ul>
+      <li>Instagram pop-up window when the Note is clicked</li>
+      <li>Instagram likes and comments when the Note is hovered</li>
+      <li>Each food Note automatically shows other shots of the featured dish</li>
+      <li>Cooler transitions :)</li>
+    </ul>
+  `,
+  4,
+  7
+)
+
+const whyCookingBlog = new Note(
+  'why-cooking-blog',
+  `
+  <p>
+    The cooking blog is where I test out different HTML, CSS, Javascript, and web design skills. I'm still a learner, so don't be too harsh to me pls.
+  </p>
+  `,
+  6,
   2
 )
 
@@ -20,25 +51,18 @@ const whyCookNote = new Note(
   'why-cook',
   `
     <p>
-      I usually cook when I run out of things to do, see something cool on Instagram, or generally just cook with my loved ones. It's also a good way to decompress from a mental block!
+      I usually cook when I  see something cool on Instagram or generally just cook with my loved ones. It's also a good way to decompress from a mental block.
     </p>
   `,
   2,
   6
 )
 
-const instagramOne = new Note(
-  'instagram1',
-  ``,
-  3,
-  3
-)
-
 const navNote = new Note(
   `navigation`,
   `
     <p>
-      Click around these Menu items to explore recipes!
+      Click on one of these Menu items to explore recipes! (Coming soon)
     </p>
     <ul>
       <li><a href="./appetizers.html">Appetizer</a></li>
@@ -50,26 +74,118 @@ const navNote = new Note(
   4
 )
 
-const instagramTwo = new Note (
-  'instagram2',
-  `
-  <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://scontent.cdninstagram.com/v/t51.29350-15/454270185_1217746615825410_4394977177350173741_n.webp?stp=dst-jpg_e35_s640x640_sh0.08&amp;efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyLmYyOTM1MCJ9&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=1p1-DPbu_CAQ7kNvgEqNmBo&amp;edm=APs17CUBAAAA&amp;ccb=7-5&amp;oh=00_AYBr8SDslCKfvLeysi8i0pkFCNmkp0xLbpgF8H6pMoL3Zw&amp;oe=66B8D21B&amp;_nc_sid=10d13b">`,
+const instagramEnglishBreakfast = new InstagramNote (
+  'instagram-english-breakfast',
+  '',
   4,
-  4
+  4,
+  '../Photos/Instagram/englishBreakfast1.jpg',
+  'https://www.instagram.com/p/C-TS1phSQq-/'
 )
 
-const instagramThree = new Note (
-  'instagram3',
-  ``,
+const instagramBasqueCheesecake = new InstagramNote (
+  'instagram=basque-cheesecake',
+  '',
+  6,
+  6,
+  '../Photos/Instagram/basqueCheesecake.jpg',
+  'https://www.instagram.com/p/C9vNTqYSgB8/'
+)
+
+const instagramBirriaTacos = new InstagramNote (
+  'instagram-birria-tacos',
+  '',
   3,
-  3
+  3,
+  '../Photos/Instagram/birriaTacos.jpg',
+  'https://www.instagram.com/p/C91B19fvZg-/'
 )
 
-export const homeNote = new Notes([
-  welcomeNote,
+const newIdeas = new Note(
+  'new-idea',
+  `
+  <p>
+    If you have any feedback or new ideas for my cooking/website, don't hesitate to reach out to me (again heheeeh) <a target="_blank" href="https://www.instagram.com/yootheocoooks/">@yootheocoooks</a> on Instagram 
+  </p>
+  `,
+  11,
+  1
+)
+
+const instagramSteakSeries = new InstagramNote(
+  'instagram-steakSeries',
+  '',
+  4,
+  4,
+  `../Photos/Instagram/steakSeries.jpg`,
+  `https://instagram/p/C8scTxxyNea`
+)
+
+const instagramPumpkinSoup = new InstagramNote(
+  'instagram-pumpkin-soup',
+  '',
+  5,
+  5,
+  `../Photos/Instagram/pumpkinSoup.jpg`,
+  `https://www.instagram.com/p/C6SjutgLmMM/`
+)
+
+const instagramBanhXeo = new InstagramNote(
+  'instagram-banh-xeo',
+  '',
+  5,
+  5,
+  `../Photos/Instagram/banhXeo.jpg`,
+  `https://www.instagram.com/p/CyH9vvQO1kU/`
+)
+
+const instagramPorkKatsu = new InstagramNote(
+  'instagram-pork-katsu',
+  '',
+  3,
+  3,
+  `../Photos/Instagram/porkKatsu.jpg`,
+  `https://www.instagram.com/p/CxzVYkmr3NH/`
+)
+
+const instagramPhoBo = new InstagramNote(
+  'instagram-pho-bo',
+  '',
+  3,
+  3,
+  `../Photos/Instagram/phoBo.jpg`,
+  `https://www.instagram.com/p/CubZ_8vuU8F/`
+)
+
+const instagramComTam = new InstagramNote(
+  'instagram-com-tam',
+  '',
+  5,
+  5,
+  `../Photos/Instagram/comTam.jpg`,
+  `https://www.instagram.com/p/CuWLnDeuj_V/`
+)
+
+const otherNotes = [
+  homePageInstructions,
   whyCookNote,
-  instagramOne,
+  instagramBasqueCheesecake,
   navNote,
-  instagramTwo,
-  instagramThree
-]);
+  whyCookingBlog,
+  instagramEnglishBreakfast,
+  instagramBirriaTacos,
+  instagramSteakSeries,
+  instagramPumpkinSoup,
+  instagramBanhXeo,
+  instagramPhoBo,
+  instagramPorkKatsu,
+  instagramComTam
+];
+
+shuffle(otherNotes);
+
+export const homeNote = new Notes(  
+  [welcomeNote]
+  .concat(otherNotes)
+  .concat([newIdeas])
+)
