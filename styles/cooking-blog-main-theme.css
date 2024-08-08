@@ -103,6 +103,7 @@ h1 {
   width: 60%;
   height: 100%;
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(auto-fit,  50px);
   grid-template-rows: repeat(auto-fill, 50px);
   grid-gap: 25px;

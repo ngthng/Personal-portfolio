@@ -6,9 +6,11 @@ export function shuffle(array) {
   } 
   return array; 
 }; 
-  
+
+/*
 // Usage 
 const myArray = ["apple", "banana", "cherry", "date", "elderberry"]; 
 const shuffledArray = shuffle(myArray); 
 
 console.log(shuffledArray); 
+*/

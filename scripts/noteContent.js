@@ -8,7 +8,7 @@ export class Notes {
     let elementHTML = ``;
     this.list.forEach((note)=> {
       elementHTML += `
-      <div class="note note-${note.name}" 
+      <div class="note note-${note.name} js-hidden" 
         style="
           grid-row: span ${note.noteHeight};
           grid-column: span ${note.noteLength}">
