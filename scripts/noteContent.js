@@ -1,3 +1,5 @@
+import { getRandomInt } from "./utils/getRandomInt.js";
+
 export class Notes {
   list;
   constructor(list) {
@@ -22,12 +24,23 @@ export class Notes {
 }
 
 export class Note {
+  name;
+  html;
+  noteLength;
+  noteHeight;
   
   constructor(name, html = '', noteLength = 2, noteHeight = 2) {
     this.name = name;
     this.html = html;
     this.noteLength = noteLength;
     this.noteHeight = noteHeight;
+  }
+
+  randomSquareSize(min = 3, max = 6) {
+    const sideLength = getRandomInt(min, max);
+    this.noteHeight = sideLength;
+    this.noteLength = sideLength;
+    return this;
   }
 }
 

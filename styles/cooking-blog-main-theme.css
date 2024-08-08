@@ -40,6 +40,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .main-nav-container nav {
   padding: 0;
@@ -57,11 +58,21 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--body-font-family);
+  font-weight: bold;
+  font-size: calc(var(--body-font-size) + 2px);
 }
 
 .main-nav-container a {
   text-decoration: none;
   color: black;
+}
+
+.main-nav-container a:hover {
+  color: rgb(93, 82, 134);
+}
+
+#current-page a {
+  color: rgb(93, 82, 134);
 }
 
 .bg {
@@ -129,6 +140,8 @@ h1 {
 .note ul {
   margin: 7px 0px;
   padding-left: 30px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
 }
 
 .note li {
@@ -139,4 +152,25 @@ h1 {
 .note a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --body-font-size: 12px;
+  }
+
+  .page-container {
+    margin: 0;
+    width: 100%;
+  }
+  .main-nav-container {
+    height: 20%; 
+    width: calc(var(--main-nav-width) - 10px);
+    box-shadow: var(--main-box-shadow);
+  }
+
+  .note-container {
+    grid-template-columns: repeat(auto-fit,  40px);
+    grid-template-rows: repeat(auto-fill, 40px);
+  }
 }
