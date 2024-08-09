@@ -5,6 +5,7 @@ const reloads = [
 ]
 
 let iconState = 1;
+let iconRotate = 1;
 
 export function refreshIcon() {
   const timeline = anime.timeline({
@@ -21,9 +22,10 @@ export function refreshIcon() {
 
   timeline.add({
     targets: '.reload-icon',
-    rotate: 90 * iconState
+    rotate: 90 * iconRotate
   }, '-=300');
 
+  iconRotate++;
   iconState++;
   if (iconState >= 3) {
     iconState = 0;
