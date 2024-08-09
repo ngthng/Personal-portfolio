@@ -1,3 +1,5 @@
+import { appearWhenScroll } from "./utils/appearWhenScroll.js";
+
 export function instagramPopupEvent(){
   document.querySelectorAll('.js-popup-instagram-img').forEach((image) => {
     image.addEventListener('click', () => {
