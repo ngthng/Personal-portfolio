@@ -81,6 +81,7 @@ const instagramEnokiBeef = new InstagramNote (
   5,
   '../Photos/Instagram/enokiBeef.jpg',
   'https://www.instagram.com/p/C6Sj7GyrHEp/',
+  'C6Sj7GyrHEp',
   ['entree']
 );
 
@@ -91,6 +92,7 @@ const instagramEnglishBreakfast = new InstagramNote (
   4,
   '../Photos/Instagram/englishBreakfast1.jpg',
   'https://www.instagram.com/p/C-TS1phSQq-/',
+  'C-TS1phSQq-',
   ['entree']
 );
 
@@ -101,6 +103,7 @@ const instagramBasqueCheesecake = new InstagramNote (
   6,
   '../Photos/Instagram/basqueCheesecake.jpg',
   'https://www.instagram.com/p/C9vNTqYSgB8/',
+  'C9vNTqYSgB8',
   ['dessert']
 );
 
@@ -111,6 +114,7 @@ const instagramBirriaTacos = new InstagramNote (
   3,
   '../Photos/Instagram/birriaTacos.jpg',
   'https://www.instagram.com/p/C91B19fvZg-/',
+  'C91B19fvZg-',
   ['appetizer', 'entree']
 );
 
@@ -143,6 +147,7 @@ const instagramSteakSeries = new InstagramNote(
   4,
   `../Photos/Instagram/steakSeries.jpg`,
   `https://instagram/p/C8scTxxyNea`,
+  'C8scTxxyNea',
   ['entree']
 );
 
@@ -153,6 +158,7 @@ const instagramPumpkinSoup = new InstagramNote(
   5,
   `../Photos/Instagram/pumpkinSoup.jpg`,
   `https://www.instagram.com/p/C6SjutgLmMM/`,
+  'C6SjutgLmMM',
   ['appetizer']
 );
 
@@ -163,6 +169,7 @@ const instagramBanhXeo = new InstagramNote(
   5,
   `../Photos/Instagram/banhXeo.jpg`,
   `https://www.instagram.com/p/CyH9vvQO1kU/`,
+  'CyH9vvQO1kU',
   ['appetizer']
 );
 
@@ -173,6 +180,7 @@ const instagramPorkKatsu = new InstagramNote(
   3,
   `../Photos/Instagram/porkKatsu.jpg`,
   `https://www.instagram.com/p/CxzVYkmr3NH/`,
+  'CxzVYkmr3NH',
   ['entree']
 );
 
@@ -182,7 +190,9 @@ const instagramPhoBo = new InstagramNote(
   3,
   3,
   `../Photos/Instagram/phoBo.jpg`,
-  `https://www.instagram.com/p/CubZ_8vuU8F/`
+  `https://www.instagram.com/p/CubZ_8vuU8F/`,
+  'CubZ_8vuU8F',
+  ['entree']
 );
 
 const instagramComTam = new InstagramNote(
@@ -192,6 +202,7 @@ const instagramComTam = new InstagramNote(
   5,
   `../Photos/Instagram/comTam.jpg`,
   `https://www.instagram.com/p/CuWLnDeuj_V/`,
+  'CuWLnDeuj_V',
   ['entree']
 );
 
@@ -202,6 +213,7 @@ const instagramTiramisu = new InstagramNote(
   3,
   `../Photos/Instagram/tiramisu.jpg`,
   `https://www.instagram.com/p/C8JZikauIY1/`,
+  'C8JZikauIY1',
   [
     'dessert'
   ]
@@ -215,6 +227,7 @@ const instagramFocaccia = new InstagramNote(
   5,
   `../Photos/Instagram/focaccia.jpg`,
   `https://www.instagram.com/p/C78jcdEuoCV/`,
+  'C78jcdEuoCV',
   ['appetizer', 'dessert']
 );
 
@@ -225,6 +238,7 @@ const instagramLemonPie = new InstagramNote(
   6,
   `../Photos/Instagram/lemonPie.jpg`,
   `https://www.instagram.com/p/C78kiwVO36O/`,
+  'C78kiwVO36O',
   ['dessert']
 );
 
@@ -235,6 +249,7 @@ const instagramKimchiPancake = new InstagramNote(
   4,
   `../Photos/Instagram/kimchiPancake.jpg`,
   `https://www.instagram.com/p/Cuc20t3S3JL/`,
+  'Cuc20t3S3JL',
   ['appetizer']
 );
 
@@ -245,6 +260,7 @@ const instagramCharsiuRamen = new InstagramNote(
   3,
   `../Photos/Instagram/charsiuRamen.jpg`,
   `https://www.instagram.com/p/CuWLI2uuYby/`,
+  'CuWLI2uuYby',
   ['entree']
 );
 
@@ -255,6 +271,7 @@ const pizzaNote = new InstagramNote(
   3,
   `../Photos/Instagram/pizza.jpg`,
   `https://www.instagram.com/yootheocoooks/`,
+  '',
   ['appetizer']
 );
 
@@ -265,6 +282,7 @@ const instagramTanghulu = new InstagramNote(
   5,
   `../Photos/Instagram/tanghulu.jpg`,
   `https://www.instagram.com/p/C78kJBeOwtK/`,
+  'C78kJBeOwtK',
   ['dessert']
 );
 
@@ -275,6 +293,7 @@ const instagramEggDropSoup = new InstagramNote(
   3,
   `../Photos/Instagram/eggDropSoup.jpg`,
   `https://www.instagram.com/p/C4Cbmd5LQm1/`,
+  'C4Cbmd5LQm1',
   ['appetizer']
 );
 
@@ -285,6 +304,7 @@ const instagramChickenKatsu = new InstagramNote(
   3,
   `../Photos/Instagram/chickenKatsu.jpg`,
   `https://www.instagram.com/p/C6pZ5Y3vbpz/`,
+  'C6pZ5Y3vbpz',
   ['entree']
 );
 
