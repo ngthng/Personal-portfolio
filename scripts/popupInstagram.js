@@ -1,3 +1,12 @@
+export function instagramPopupEvent(){
+  document.querySelectorAll('.js-popup-instagram-img').forEach((image) => {
+    image.addEventListener('click', () => {
+      instagramPopup(image.dataset.instagramId);
+      appearWhenScroll();
+    });
+  });
+}
+
 export function instagramPopup(postId) {
   const popupContainerElement = document.querySelector('.js-popup-instagram');
 
