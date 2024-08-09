@@ -1,7 +1,7 @@
 import {Notes, Note, InstagramNote} from '../scripts/noteContent.js'
 import {shuffle} from '../scripts/utils/shuffleArray.js';
 
-const welcomeNote = new Note(
+export const welcomeNote = new Note(
   'welcome',
   ` 
     <p>
@@ -80,7 +80,8 @@ const instagramEnokiBeef = new InstagramNote (
   5,
   5,
   '../Photos/Instagram/enokiBeef.jpg',
-  'https://www.instagram.com/p/C6Sj7GyrHEp/'
+  'https://www.instagram.com/p/C6Sj7GyrHEp/',
+  ['entree']
 );
 
 const instagramEnglishBreakfast = new InstagramNote (
@@ -89,7 +90,8 @@ const instagramEnglishBreakfast = new InstagramNote (
   4,
   4,
   '../Photos/Instagram/englishBreakfast1.jpg',
-  'https://www.instagram.com/p/C-TS1phSQq-/'
+  'https://www.instagram.com/p/C-TS1phSQq-/',
+  ['entree']
 );
 
 const instagramBasqueCheesecake = new InstagramNote (
@@ -98,7 +100,8 @@ const instagramBasqueCheesecake = new InstagramNote (
   6,
   6,
   '../Photos/Instagram/basqueCheesecake.jpg',
-  'https://www.instagram.com/p/C9vNTqYSgB8/'
+  'https://www.instagram.com/p/C9vNTqYSgB8/',
+  ['dessert']
 );
 
 const instagramBirriaTacos = new InstagramNote (
@@ -107,14 +110,15 @@ const instagramBirriaTacos = new InstagramNote (
   3,
   3,
   '../Photos/Instagram/birriaTacos.jpg',
-  'https://www.instagram.com/p/C91B19fvZg-/'
+  'https://www.instagram.com/p/C91B19fvZg-/',
+  ['appetizer', 'entree']
 );
 
-const newIdeas = new Note(
+export const newIdeas = new Note(
   'new-idea',
   `
   <p>
-    If you have any feedback or new ideas for my cooking/website, don't hesitate to reach out to me (again heheeeh) <a target="_blank" href="https://www.instagram.com/yootheocoooks/">@yootheocoooks</a> on Instagram 
+    If you have any feedback or new ideas for my cooking/<a href="../index.html">website</a>, don't hesitate to reach out to me (again heheeeh) <a target="_blank" href="https://www.instagram.com/yootheocoooks/">@yootheocoooks</a> on Instagram 
   </p>
   `,
   11,
@@ -138,7 +142,8 @@ const instagramSteakSeries = new InstagramNote(
   4,
   4,
   `../Photos/Instagram/steakSeries.jpg`,
-  `https://instagram/p/C8scTxxyNea`
+  `https://instagram/p/C8scTxxyNea`,
+  ['entree']
 );
 
 const instagramPumpkinSoup = new InstagramNote(
@@ -147,7 +152,8 @@ const instagramPumpkinSoup = new InstagramNote(
   5,
   5,
   `../Photos/Instagram/pumpkinSoup.jpg`,
-  `https://www.instagram.com/p/C6SjutgLmMM/`
+  `https://www.instagram.com/p/C6SjutgLmMM/`,
+  ['appetizer']
 );
 
 const instagramBanhXeo = new InstagramNote(
@@ -156,7 +162,8 @@ const instagramBanhXeo = new InstagramNote(
   5,
   5,
   `../Photos/Instagram/banhXeo.jpg`,
-  `https://www.instagram.com/p/CyH9vvQO1kU/`
+  `https://www.instagram.com/p/CyH9vvQO1kU/`,
+  ['appetizer']
 );
 
 const instagramPorkKatsu = new InstagramNote(
@@ -165,7 +172,8 @@ const instagramPorkKatsu = new InstagramNote(
   3,
   3,
   `../Photos/Instagram/porkKatsu.jpg`,
-  `https://www.instagram.com/p/CxzVYkmr3NH/`
+  `https://www.instagram.com/p/CxzVYkmr3NH/`,
+  ['entree']
 );
 
 const instagramPhoBo = new InstagramNote(
@@ -183,7 +191,8 @@ const instagramComTam = new InstagramNote(
   5,
   5,
   `../Photos/Instagram/comTam.jpg`,
-  `https://www.instagram.com/p/CuWLnDeuj_V/`
+  `https://www.instagram.com/p/CuWLnDeuj_V/`,
+  ['entree']
 );
 
 const instagramTiramisu = new InstagramNote(
@@ -193,6 +202,9 @@ const instagramTiramisu = new InstagramNote(
   3,
   `../Photos/Instagram/tiramisu.jpg`,
   `https://www.instagram.com/p/C8JZikauIY1/`,
+  [
+    'dessert'
+  ]
 );
 
 
@@ -203,6 +215,7 @@ const instagramFocaccia = new InstagramNote(
   5,
   `../Photos/Instagram/focaccia.jpg`,
   `https://www.instagram.com/p/C78jcdEuoCV/`,
+  ['appetizer', 'dessert']
 );
 
 const instagramLemonPie = new InstagramNote(
@@ -212,6 +225,7 @@ const instagramLemonPie = new InstagramNote(
   6,
   `../Photos/Instagram/lemonPie.jpg`,
   `https://www.instagram.com/p/C78kiwVO36O/`,
+  ['dessert']
 );
 
 const instagramKimchiPancake = new InstagramNote(
@@ -221,6 +235,7 @@ const instagramKimchiPancake = new InstagramNote(
   4,
   `../Photos/Instagram/kimchiPancake.jpg`,
   `https://www.instagram.com/p/Cuc20t3S3JL/`,
+  ['appetizer']
 );
 
 const instagramCharsiuRamen = new InstagramNote(
@@ -230,6 +245,7 @@ const instagramCharsiuRamen = new InstagramNote(
   3,
   `../Photos/Instagram/charsiuRamen.jpg`,
   `https://www.instagram.com/p/CuWLI2uuYby/`,
+  ['entree']
 );
 
 const pizzaNote = new InstagramNote(
@@ -239,6 +255,7 @@ const pizzaNote = new InstagramNote(
   3,
   `../Photos/Instagram/pizza.jpg`,
   `https://www.instagram.com/yootheocoooks/`,
+  ['appetizer']
 );
 
 const instagramTanghulu = new InstagramNote(
@@ -248,6 +265,7 @@ const instagramTanghulu = new InstagramNote(
   5,
   `../Photos/Instagram/tanghulu.jpg`,
   `https://www.instagram.com/p/C78kJBeOwtK/`,
+  ['dessert']
 );
 
 const instagramEggDropSoup = new InstagramNote(
@@ -257,9 +275,20 @@ const instagramEggDropSoup = new InstagramNote(
   3,
   `../Photos/Instagram/eggDropSoup.jpg`,
   `https://www.instagram.com/p/C4Cbmd5LQm1/`,
+  ['appetizer']
 );
 
-const otherNotes = [
+const instagramChickenKatsu = new InstagramNote(
+  'instagram-chicken-katsu',
+  '',
+  3,
+  3,
+  `../Photos/Instagram/chickenKatsu.jpg`,
+  `https://www.instagram.com/p/C6pZ5Y3vbpz/`,
+  ['entree']
+);
+
+export const otherNotes = [
   homePageInstructions,
   whyCookNote,
   instagramBasqueCheesecake.randomSquareSize(),
@@ -283,6 +312,7 @@ const otherNotes = [
   instagramTanghulu.randomSquareSize(),
   instagramEnokiBeef.randomSquareSize(),
   instagramEggDropSoup.randomSquareSize(),
+  instagramChickenKatsu.randomSquareSize(),
 ];
 
 shuffle(otherNotes);
