@@ -14,7 +14,7 @@ export const jobList = [
     webLink: 'https://yachie-lab.org/',
     workingPeriod: {
       startingDate: 'May 2024',
-      endingDate: 'Current'
+      endingDate: 'Aug 2024'
     },
     description: 'As the Research Assistant for the Gene Regulatory Network project, I implement machine learning to process and intepret RNA and transcriptomic data. <br><br>Channelling my passion for programming, mathematics, and biology, I find myself enjoying solving challenges every day.',
    

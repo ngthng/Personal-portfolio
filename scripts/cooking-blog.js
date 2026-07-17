@@ -1,4 +1,4 @@
-import { homeNote, otherNotes, welcomeNote, newIdeas} from "../data/notesHome.js";
+import { homeNote, otherNotes, welcomeNote, newIdeas} from "../data/home-cookingBlog.js";
 import { appearWhenScroll } from "./utils/appearWhenScroll.js";
 import { shuffle } from "./utils/shuffleArray.js";
 import { refreshIcon } from "./refreshButton.js";

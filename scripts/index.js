@@ -1,4 +1,4 @@
-import { jobList } from "../data/myCareer.js";
+import { jobList } from "../data/myCareer-index.js";
 import { replaceFade } from "./utils/fades.js";
 
 careerMenuSelectorHTML();

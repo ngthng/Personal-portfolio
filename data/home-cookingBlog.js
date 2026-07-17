@@ -1,4 +1,4 @@
-import {Notes, Note, InstagramNote} from '../scripts/noteContent.js'
+import {Notes, Note, InstagramNote} from '../scripts/noteContent-cookingBlog.js'
 import {shuffle} from '../scripts/utils/shuffleArray.js';
 
 export const welcomeNote = new Note(
