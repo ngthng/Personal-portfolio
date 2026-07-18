@@ -4,6 +4,7 @@
   --main-theme-color: #cacadd;
   --main-font-color-unselected: rgb(93, 82, 134);
   --main-font-color-default: #1d0c2b;
+  --main-font-color-selected: #800020;
   --main-box-shadow: 0px 0px 7px 2px  rgb(0 0 0 /20%);
 
   --main-nav-width: 120px;
@@ -25,13 +26,13 @@ body {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
-  height: 3500px;
+  height: 100%;
   width: 100%;
   font-family: var(--body-font-family);
   
 }
 
-.main-nav-container {
+.js-food-type-filter {
   background-color: var(--main-theme-color);
   padding: 0;
   
@@ -41,39 +42,29 @@ body {
   width: var(--main-nav-width);
   box-shadow: var(--main-box-shadow);
 
-  height: 50%; 
+  height: fit-content; 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
 }
-.main-nav-container nav {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+
+
+.js-food-type-filter input {
+  display: none;
 }
 
-.main-nav-container li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  font-family: var(--body-font-family);
-  font-weight: bold;
-  font-size: calc(var(--body-font-size) + 2px);
+.js-food-type-filter label {
+  text-align: center;
 }
 
-.main-nav-container a {
-  text-decoration: none;
-  color: black;
-}
-
-.main-nav-container a:hover {
+.js-food-type-filter label:hover {
   color: var(--main-font-color-unselected);
+}
+
+.js-food-type-filter input:checked + label {
+  color: var(--main-font-color-selected);
 }
 
 .socials-container {
@@ -163,8 +154,8 @@ h1 {
 }
 
 .note-container {
-  width: 60%;
-  height: 100%1;
+  width: 80%;
+  height: 100%;
   display: grid;
   place-items: center;
   grid-auto-flow: row;
@@ -173,15 +164,54 @@ h1 {
   grid-gap: 25px;
   justify-content: center;
   align-items: center;
+}
 
+.note-container-vsco {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  
+  /* 1. Set a uniform explicit row height*/
+  grid-auto-rows: 200px; 
+  
+  gap: 16px;
+  width: 70%;
+  
+  /* 2. Magic switch: forces items to pack tightly across rows horizontally */
+  grid-auto-flow: dense; 
 }
 
 .note {
   width: 100%;
   height: 100%; 
-  padding: 0;
+
+  padding: 0px;
+  /* margin-bottom: 16px; */
+
   background-color: var(--main-theme-color);
   box-shadow: var(--main-box-shadow);
+
+  display: block;
+  break-inside: avoid;
+  box-sizing: border-box;
+}
+
+/* Horizontal spanning rules */
+.note.wide-item {
+  grid-column: span 2;
+}
+
+.note.ultra-wide-item {
+  grid-column: span 3;
+}
+
+/* Aspect ratio safety */
+.note.square-item {
+  aspect-ratio: 1 / 1;
+}
+
+.note.force-square {
+  /* It looks at the HTML element's inline style to find the number */
+  grid-row: span var(--note-span-size, 1); 
 }
 
 .note p {
@@ -208,7 +238,7 @@ h1 {
   color: black;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1024px) {
   :root {
     --body-font-size: 11px;
   }
@@ -220,15 +250,9 @@ h1 {
     margin: 0;
     width: 100%;
   }
-  .main-nav-container {
-    height: 20%; 
-    width: calc(var(--main-nav-width) - 10px);
-    box-shadow: var(--main-box-shadow);
-  }
 
-  .note-container {
-    grid-template-columns: repeat(auto-fit,  40px);
-    grid-template-rows: repeat(auto-fill, 40px);
-    width: 40%;
+  .note-container-vsco {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr); 
   }
 }

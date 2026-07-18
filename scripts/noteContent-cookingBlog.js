@@ -7,19 +7,67 @@ export class Notes {
   }
 
   renderNotes(element) {
-    let elementHTML = ``;
-    this.list.forEach((note)=> {
-      elementHTML += `
-      <div class="note note-${note.name} js-hidden" 
-        style="
-          grid-row: span ${note.noteHeight};
-          grid-column: span ${note.noteLength}">
-        ${note.html}
-      </div>
-      `;
-    });
+      let elementHTML = ``;
+      
+      // 1. Detect current layout columns based on our CSS Media Query breakpoint (1024px)
+      const currentMaxColumns = window.innerWidth >= 1024 ? 4 : 3;
 
-    element.innerHTML = elementHTML;
+      const instagramNotes = this.list.filter(note => note.constructor.name === 'InstagramNote');
+      const targetLargeCount = Math.round(instagramNotes.length * 0.40);
+      
+      const largeInstagramIndexes = new Set(
+        Array.from({ length: instagramNotes.length }, (_, i) => i)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, targetLargeCount)
+      );
+
+      let instagramCounter = 0;
+
+      this.list.forEach((note) => {
+        let length = 1;
+        let height = 1;
+        
+        const isInstagram = note.constructor.name === 'InstagramNote';
+
+        if (isInstagram) {
+          length = 1;
+          height = 1;
+
+          if (largeInstagramIndexes.has(instagramCounter)) {
+            const variations = [
+              { l: 2, h: 1 }, 
+              { l: 1, h: 2 }, 
+              { l: 2, h: 2 }, 
+              { l: 3, h: 2 }  
+            ];
+            const chosen = variations[Math.floor(Math.random() * variations.length)];
+            length = chosen.l;
+            height = chosen.h;
+          }
+          instagramCounter++;
+        } else {
+          length = parseInt(note.noteLength) || 1;
+          height = parseInt(note.noteHeight) || 1;
+        }
+
+        // 2. SAFETY CHECK: Clamp the column length to the actual grid width
+        // This stops a span 4 item from breaking a 3-column view
+        if (length > currentMaxColumns) {
+          length = currentMaxColumns;
+        }
+
+        let classes = `note note-${note.name} js-hidden`;
+
+        const inlineStyle = `style="grid-column: span ${length}; grid-row: span ${height};"`;
+
+        elementHTML += `
+        <div class="${classes}" ${inlineStyle}>
+          ${note.html}
+        </div>
+        `;
+      });
+
+      element.innerHTML = elementHTML;
   }
 }
 

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monoton&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles/cooking-blog-main-theme.css"></link>
+    <link rel="stylesheet" href="../styles/cookingBlog.css"></link>
     <link rel="stylesheet" href="../styles/appearWhenScroll.css"></link>
     <link rel="stylesheet" href="../styles/instagramPopup.css"></link>
     <link rel="icon" href="../Photos/cooking-blog-logo.png" type="image/icon png">
@@ -16,15 +16,20 @@
 </head>
 
   <body>
-    <div class="main-nav-container">
-      <nav>
-        <li id="current-page"><a href="#page-top">Home</a></li>
-        <li><a href="./appetizers.html">Appetizers</a></li>
-        <li><a href="./entrees.html">Entrees</a></li>
-        <li><a href="./desserts.html">Desserts</a></li>
-      </nav>
-      
-    </div>
+    <fieldset class="js-food-type-filter">
+      <div>
+        <input type="checkbox" id="appetizer" name="food-type" value="appetizer" />
+        <label for="appetizer">Appetizers</label>
+      </div>
+      <div>
+        <input type="checkbox" id="entree" name="food-type" value="entree" />
+        <label for="entree">Entrees</label>
+      </div>
+      <div>
+        <input type="checkbox" id="dessert" name="food-type" value="dessert" />
+        <label for="dessert">Desserts</label>
+      </div>
+    </fieldset>
     <div class="socials-container">
       
       <a href="../index.html">
@@ -78,7 +83,7 @@
     <div class="bg bg-tint"><img src=""/></div>
     <div class="page-container" id="page-top">
       <h1>Theo's Cooking Blog</h1>
-      <div class="note-container js-note-container"></div>     
+      <div class="note-container-vsco js-note-container"></div>     
     </div>
     <div class="popup-instagram js-popup-instagram"></div>
   <footer>

@@ -11,11 +11,11 @@ export const welcomeNote = new Note(
       <li>Creating this webpage!</li>
       <li>Adding carousels from Instagram <a href="https://www.instagram.com/yootheocoooks/" target="_blank">@yootheocoooks</a></li>
       <li>Exploring baking with friends</li>
-      <li>In the process of moving house/job so I would have less time to play around :(</li>
+      
     </ul>
   `,
-  9,
-  3
+  2,
+  1
 );
 
 const homePageInstructions = new Note(
@@ -26,14 +26,14 @@ const homePageInstructions = new Note(
       Future features: 
     </p>
     <ul>
-      <li>Instagram pop-up window when the Note is clicked</li>
+      <li>Instagram pop-up window when the Note is clicked: ✓</li>
       <li>Instagram likes and comments when the Note is hovered</li>
       <li>Each food Note automatically shows other shots of the featured dish</li>
       <li>Cooler transitions :)</li>
     </ul>
   `,
-  5,
-  7
+  3,
+  1
 );
 
 const whyCookingBlog = new Note(
@@ -43,19 +43,19 @@ const whyCookingBlog = new Note(
     The cooking blog is where I test out different HTML, CSS, Javascript, and web design skills. I'm still a learner, so don't be too harsh to me pls.
   </p>
   `,
-  6,
-  2
+  1,
+  1
 );
 
 const whyCookNote = new Note(
   'why-cook',
   `
     <p>
-      I usually cook when I  see something cool on Instagram or generally just cook with my loved ones. It's also a good way to decompress from a mental block.
+      I usually cook when I see something cool on Instagram or generally just cook with my loved ones. It's also a good way to decompress from a mental block.
     </p>
   `,
-  2,
-  6
+  1,
+  1
 );
 
 const navNote = new Note(
@@ -70,8 +70,8 @@ const navNote = new Note(
       <li><a href="./desserts.html">Desserts</a></li>
     </ul>
   `,
-  2,
-  4
+  1,
+  1
 );
 
 const instagramEnokiBeef = new InstagramNote (
@@ -125,7 +125,7 @@ export const newIdeas = new Note(
     If you have any feedback or new ideas for my cooking/<a href="../index.html">website</a>, don't hesitate to reach out to me (again heheeeh) <a target="_blank" href="https://www.instagram.com/yootheocoooks/">@yootheocoooks</a> on Instagram 
   </p>
   `,
-  11,
+  1,
   1
 );
 
@@ -133,11 +133,11 @@ const whyRandom = new Note(
   'why-random',
   `
   <p>
-    If you refresh the home page, you may notice that the order of my Notes are randomized. Why so? I want to convey the spontaneous mindeset that I approach with my dishes. Life is unpredictable, and so is my next meal lol.
+    If you refresh the home page, you may notice that the order of my Notes are randomized. Why so? I want to convey the spontaneous mindeset that I approach with my dishes. Life is unpredictable, and so is my next meal.
   <p>
   `,
-  5,
-  3
+  1,
+  2
 )
 
 const instagramSteakSeries = new InstagramNote(
@@ -308,6 +308,28 @@ const instagramChickenKatsu = new InstagramNote(
   ['entree']
 );
 
+const pastaCacioEPepe = new InstagramNote(
+  'instagram-cacio-e-pepe',
+  '',
+  3,
+  3,
+  `../Photos/Instagram/cacioEPepe.jpg`,
+  `https://www.instagram.com/p/DAPPACaShC4/`,
+  'DAPPACaShC4',
+  ['entree']
+);
+
+const xiuLongBao = new InstagramNote(
+  'instagram-xiu-long-bao',
+  '',
+  3,
+  3,
+  `../Photos/Instagram/xiuLongBao.jpg`,
+  `https://www.instagram.com/p/DBDMHBfJWa1/`,
+  'DBDMHBfJWa1',
+  ['appetizer']
+);
+
 export const otherNotes = [
   homePageInstructions,
   whyCookNote,
@@ -333,6 +355,8 @@ export const otherNotes = [
   instagramEnokiBeef.randomSquareSize(),
   instagramEggDropSoup.randomSquareSize(),
   instagramChickenKatsu.randomSquareSize(),
+  pastaCacioEPepe.randomSquareSize(),
+  xiuLongBao.randomSquareSize(),
 ];
 
 shuffle(otherNotes);
